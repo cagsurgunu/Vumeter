@@ -33,8 +33,13 @@ class VuMeter(MDBoxLayout):
     def on_level(self, instance, level):
         
         value=100-level
-        for i in range(value):
-            if i<value:
-                self.elements[i].opacity=0
-            else:
-                self.elements[i].opacity=1
+       
+        if value>100:
+            pass
+        
+        else:
+            for i in range(100):
+                if i<value:
+                    self.elements[i].opacity=0
+                else:
+                    self.elements[i].opacity=1
